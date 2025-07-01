@@ -1,1 +1,17 @@
-spring.application.name=adminweb
+mybatis:
+  type-aliases-package: com.refsys.adminweb
+  configuration:
+    map-underscore-to-camel-case: true   # DB의 snake_case → Java camelCase 자동 매핑
+
+logging:
+  level:
+    org.mybatis.spring.mapper: DEBUG
+    org.apache.ibatis: DEBUG
+    com.example.project.mapper: DEBUG
+
+spring:
+  datasource:
+    url:
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
