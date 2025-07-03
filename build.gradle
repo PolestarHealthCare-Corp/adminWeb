@@ -30,7 +30,7 @@ dependencies {
 //    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 
     //MyBatis 추가
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
 
     //H2 데이터베이스 추가
     runtimeOnly 'com.h2database:h2'

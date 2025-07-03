@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.refsys.adminweb.repository.MemberMapper">
+  <insert id="insert" parameterType="Member" useGeneratedKeys="true" keyProperty="id">
+    INSERT INTO member (username, phone)
+    VALUES (#{username}, #{phone})
+  </insert>
+
+  <select id="findById" parameterType="long" resultType="Member">
+    SELECT id, username, phone
+    FROM member
+    WHERE id = #{id}
+  </select>
+</mapper>

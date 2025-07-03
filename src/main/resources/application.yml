@@ -1,7 +1,8 @@
 mybatis:
-  type-aliases-package: com.refsys.adminweb
+  mapper-locations: classpath:/repository/**/*.xml
+  type-aliases-package: com.refsys.adminweb.domain
   configuration:
-    map-underscore-to-camel-case: true   # DB의 snake_case → Java camelCase 자동 매핑
+    map-underscore-to-camel-case: true
 
 logging:
   level:
@@ -11,7 +12,7 @@ logging:
 
 spring:
   datasource:
-    url:
+    url: jdbc:h2:tcp://localhost/~/admin
     driver-class-name: org.h2.Driver
     username: sa
     password:
